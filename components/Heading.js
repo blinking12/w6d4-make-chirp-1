@@ -15,7 +15,7 @@ class Heading extends Component {
                 </div>
                 <div className="col-xs-9 text-right">
                     <h4 className="followers">Followers</h4>
-                    <img className="thumbnail avatar" src="./img/chirp-logo.png" />
+                    <img className="thumbnail avatar" src="http://robohash.org/today" />
                     <a href="#">Logout</a>
                 </div>
             </div>
