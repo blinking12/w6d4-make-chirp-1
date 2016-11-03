@@ -8,8 +8,17 @@ class Heading extends Component {
         // }
     }
     render() {
-        return <div>
-            <h3>Placeholder for heading. Will contain user name, following, log out button</h3>
+        return <div className="container">
+            <div className="row flex">
+                <div className="col-xs-3">
+                    <img className="logo" src="./img/chirp-logo.png" />
+                </div>
+                <div className="col-xs-9 text-right">
+                    <h4 className="followers">Followers</h4>
+                    <img className="thumbnail avatar" src="./img/chirp-logo.png" />
+                    <a href="#">Logout</a>
+                </div>
+            </div>
         </div>
     }
 }

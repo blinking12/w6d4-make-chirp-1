@@ -12,8 +12,15 @@ class ChirpUploader extends Component {
     //     // upload function to post chirp to the server
     // }
     render() {
-        return <div>
-            <h3>Placeholder for Chirp Uploader. Will contain text input field and chirp button to post the chirp</h3>
+        return <div className="container uploader">
+            <div className="row">
+                <div className="form-group col-xs-12 col-sm-8 col-sm-offset-1">
+                    <input type="text" id="shout" name="shout" required maxLength="170" className="form-control" />
+                </div>
+                <div className="form-group col-xs-12 col-sm-2 text-center">
+                    <button id="chirp" type="button" className="btn btn-default icon"><img className="logo" src="./img/chirp-icon.png"/></button>
+                </div>
+            </div>
         </div>
     }
 }

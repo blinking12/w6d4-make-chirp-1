@@ -1,3 +1,57 @@
+$green: #50e3c2;
+$gray: #5b5b5b;
+
+* { box-sizing: border-box; }
+body { color: $gray; }
+header {
+    padding: 10px;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 70px;
+}
+.icon {
+    border-width: 2px;
+    margin-top: 16px;
+}
+.follow {
+    &:hover {
+        background-color: transparent;
+        border: 1px solid $green;
+    }
+}
+.uploader {
+    margin-top: 10px;
+}
+#shout {
+    height: 100px;
+}
+.followers {
+    display: inline-block;
+}
+.avatar {
+    width: 80px;
+    display: inline-block;
+    margin: 0 10px;
+}
+.sign {
+    border: 3px solid $green;
+}
+.button {
+    background-color: $green;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    &:hover {
+        background-color: $gray;
+        color: $green;
+    }
+}
+
 .btncolor {
     color: white;
     background: #50E3C2;
