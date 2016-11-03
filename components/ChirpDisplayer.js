@@ -5,7 +5,7 @@ class ChirpDisplayer extends Component {
         super(props)
         this.state = {
             chirps: ['a', 'b'],
-            followers: ['a', 'b']
+            following: ['a', 'b']
         }
     }
     componentDidMount() {
@@ -15,10 +15,10 @@ class ChirpDisplayer extends Component {
         var chirps = this.state.chirps.map((chirp, i) => {
             return <div className="row panel panel-default" key={i}>
                         <div className="panel-body">
-                            <div className="col-sm-3 col-sm-offset-0 col-xs-6 col-xs-offset-3">
-                                <img className="avatar thumbnail" src="./img/chirp-logo.png"/>
+                            <div className="col-sm-3 col-sm-offset-0 col-xs-6 col-xs-offset-3 text-center">
+                                <img className="avatar thumbnail" src={"http://robohash.org/" + chirp[i]}/>
                             </div>
-                            <div className="col-sm-9">
+                            <div className="col-sm-9 col-xs-12">
                                 <p>Placeholder for each chirp. Will need to get avatar photo of user who posted, the chirp text, and add a follow/unfollow button.</p>
                             </div>
                             <div className="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-9">
@@ -36,7 +36,8 @@ class ChirpDisplayer extends Component {
                 <div className="col-sm-3 col-sm-offset-1">
                     <div className="row panel panel-default">
                         <div className="panel-body text-center">
-                            <h4>{this.state.followers.length} Followers</h4>
+                            <h4>Following {this.state.following.length} users</h4>
+                            <button type="button" className="btn btn-default">See all users</button>
                         </div>
                     </div>
                 </div>

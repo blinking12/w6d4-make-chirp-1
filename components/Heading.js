@@ -8,15 +8,14 @@ class Heading extends Component {
         // }
     }
     render() {
-        return <div className="container">
+        return <div className="container-fluid heading">
             <div className="row flex">
                 <div className="col-xs-3">
                     <img className="logo" src="./img/chirp-logo.png" />
                 </div>
                 <div className="col-xs-9 text-right">
-                    <h4 className="followers">Followers</h4>
                     <img className="thumbnail avatar" src="http://robohash.org/today" />
-                    <a href="#">Logout</a>
+                    <button type="button" className="btn btn-default">Logout</button>
                 </div>
             </div>
         </div>
