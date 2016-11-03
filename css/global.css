@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #5b5b5b;
+}
+
+header {
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+}
+
+.icon {
+  border-width: 2px;
+  margin-top: 16px;
+}
+
+.follow:hover {
+  background-color: transparent;
+  border: 1px solid #50e3c2;
+}
+
+.uploader {
+  margin-top: 10px;
+}
+
+#shout {
+  height: 100px;
+}
+
+.followers {
+  display: inline-block;
+}
+
+.avatar {
+  width: 80px;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.sign {
+  border: 3px solid #50e3c2;
+}
+
+.button {
+  background-color: #50e3c2;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #5b5b5b;
+  color: #50e3c2;
+}
