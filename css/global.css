@@ -81,10 +81,19 @@ header {
   margin-bottom: 10px;
 }
 
-#big_logo {
-  margin: 0 auto;
+#big_logo img {
+  width: 60%;
+  margin: 0 20%;
 }
 
-#big_logo img {
-  width: 80%;
+.heading_buttons {
+  margin-left: 10px;
+}
+
+.users {
+  margin: 5px;
+}
+
+.chirp_body {
+  word-wrap: break-word;
 }

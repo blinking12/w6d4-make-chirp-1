@@ -29,7 +29,7 @@ function signupHandler() {
   data.append('name', name)
   data.append('avatar', photo.files[0])
 
-  fetch('http://7d7089fa.ngrok.io/api/signup', {
+  fetch('https://immense-harbor-69502.herokuapp.com/api/signup', {
     method: 'POST',
     body: data
   })
@@ -40,8 +40,7 @@ function signupHandler() {
 function signedupHandler(response) {
   if (typeof response.user != 'undefined') {
     sessionStorage.setItem('chirps', response.user.api_token)
-    sessionStorage.setItem('name', response.user.name)
-    sessionStorage.setItem('email', response.user.email)
+    sessionStorage.setItem('id', response.user.id)
     sessionStorage.setItem('avatar', response.user.avatar)
     window.location.href = '/chirps.html'
   }
@@ -59,7 +58,7 @@ function signinHandler() {
   var email = document.querySelector('#email').value
   var password = document.querySelector('#password').value
 
-  fetch('http://7d7089fa.ngrok.io/api/log_in', {
+  fetch('https://immense-harbor-69502.herokuapp.com/api/log_in', {
     body: JSON.stringify({
       email: email,
       password: password
@@ -75,8 +74,8 @@ function signinHandler() {
 
 function signedinHandler(response) {
   sessionStorage.setItem('chirps', response.user.api_token)
-  sessionStorage.setItem('name', response.user.name)
-  sessionStorage.setItem('email', response.user.email)
+  sessionStorage.setItem('id', response.user.id)
   sessionStorage.setItem('avatar', response.user.avatar)
   window.location.href = '/chirps.html'
+  console.log(sessionStorage.getItem('avatar'))
 }

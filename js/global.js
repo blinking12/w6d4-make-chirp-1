@@ -5,7 +5,7 @@ import { Router, Route, Link, browserHistory } from 'react-router'
 import Chirps from '../components/Chirps'
 import UserDisplayer from '../components/UserDisplayer'
 
-window.renderView = function() {
+var renderView = function() {
     ReactDOM.render(
         <Router history={browserHistory}>
             <Route path="/chirps.html" component={Chirps} />

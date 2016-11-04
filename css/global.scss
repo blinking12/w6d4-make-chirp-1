@@ -67,7 +67,16 @@ header {
 }
 #big_logo {
     img {
-        width: 80%;
+        width: 60%;
+        margin: 0 20%;
     }
-    margin: 0 auto;
+}
+.heading_buttons {
+    margin-left: 10px;
+}
+.users {
+    margin: 5px;
+}
+.chirp_body {
+    word-wrap: break-word;
 }

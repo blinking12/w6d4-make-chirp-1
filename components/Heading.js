@@ -10,6 +10,7 @@ class Heading extends Component {
         window.location.href = "/index.html"
     }
     render() {
+        var avatar = 'https://immense-harbor-69502.herokuapp.com' + sessionStorage.getItem('avatar')
         return <div className="container-fluid heading">
             <div className="row flex">
                 <div className="col-xs-3">
@@ -17,12 +18,12 @@ class Heading extends Component {
                 </div>
                 <div className="col-xs-9 text-right">
                     <Link to="/chirps.html">
-                        <button type="button" className="btn btn-default">Chirps</button>
+                        <button type="button" className="btn btn-default heading_buttons">Chirps</button>
                     </Link>
                     <Link to="/users.html">
-                        <button type="button" className="btn btn-default">Users</button>
+                        <button type="button" className="btn btn-default heading_buttons">Users</button>
                     </Link>
-                    <img className="thumbnail avatar" src="http://robohash.org/today" />
+                    <img className="thumbnail avatar" src={avatar} />
                     <button type="button" className="btn btn-default" onClick={this.logout}>Logout</button>
                 </div>
             </div>
