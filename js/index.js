@@ -45,12 +45,12 @@ function signedupHandler(response) {
 
 function signinHandler() {
 
-  var email = document.querySelector('#email').value
+  var username = document.querySelector('#username').value
   var password = document.querySelector('#password').value
 
   fetch('', {
     body: JSON.stringify({
-      email: email,
+      username: username,
       password: password
     }),
     method: 'POST',
