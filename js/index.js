@@ -6,13 +6,17 @@ signin.addEventListener('click', signinHandler)
 
 function signupHandler() {
 
-  var email = document.querySelector('#email').value
+  var username = document.querySelector('#username').value
   var password = document.querySelector('#password').value
+  var name = document.querySelector('#name').value
+  var photo = document.querySelector('#photo').value
 
   fetch('', {
     body: JSON.stringify({
-      email: email,
-      password: password
+      username: username,
+      password: password,
+      name: name,
+      photo: photo
     }),
     method: 'POST',
     headers: {
@@ -26,8 +30,8 @@ function signupHandler() {
 
 function signedupHandler(response) {
   if (typeof response.user != 'undefined') {
-    sessionStorage.setItem('phetchly', response.user.api_token)
-    window.location.href = '/photos.html'
+    sessionStorage.setItem('chirps', response.user.api_token)
+    window.location.href = '/chirps.html'
   }
   else {
     response.forEach(function(error) {
@@ -43,12 +47,12 @@ function signedupHandler(response) {
 
 function signinHandler() {
 
-  var email = document.querySelector('#email').value
+  var username = document.querySelector('#username').value
   var password = document.querySelector('#password').value
 
   fetch('', {
     body: JSON.stringify({
-      email: email,
+      username: username,
       password: password
     }),
     method: 'POST',
@@ -61,6 +65,6 @@ function signinHandler() {
 }
 
 function signedinHandler(response) {
-  sessionStorage.setItem('phetchly', response.user.api_token)
-  window.location.href = '/photos.html'
+  sessionStorage.setItem('chirps', response.user.api_token)
+  window.location.href = '/chirps.html'
 }
