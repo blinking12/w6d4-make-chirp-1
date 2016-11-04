@@ -1,17 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Router, Route, Link, browserHistory } from 'react-router'
 
-import ChirpUploader from '../components/ChirpUploader'
-import ChirpDisplayer from '../components/ChirpDisplayer'
-import Heading from '../components/Heading'
+import Chirps from '../components/Chirps'
+import UserDisplayer from '../components/UserDisplayer'
 
 window.renderView = function() {
     ReactDOM.render(
-        <div>
-            <Heading />
-            <ChirpUploader />
-            <ChirpDisplayer />
-        </div>,
+        <Router history={browserHistory}>
+            <Route path="/chirps.html" component={Chirps} />
+            <Route path="/users.html" component={UserDisplayer} />
+        </Router>,
         document.querySelector('#app')
     )
 }

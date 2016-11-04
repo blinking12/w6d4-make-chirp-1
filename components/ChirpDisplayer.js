@@ -4,13 +4,14 @@ class ChirpDisplayer extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            chirps: ['a', 'b'],
+            chirps: ['a', 'b', 'c'],
             following: ['a', 'b']
         }
     }
     componentDidMount() {
         // function to call fetch to get the posted chirps
     }
+
     render() {
         var chirps = this.state.chirps.map((chirp, i) => {
             return <div className="row panel panel-default" key={i}>
@@ -19,7 +20,7 @@ class ChirpDisplayer extends Component {
                                 <img className="avatar thumbnail" src={"http://robohash.org/" + chirp[i]}/>
                             </div>
                             <div className="col-sm-9 col-xs-12">
-                                <p>Placeholder for each chirp. Will need to get avatar photo of user who posted, the chirp text, and add a follow/unfollow button.</p>
+                                <p>{this.state.chirps[i]}</p>
                             </div>
                             <div className="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-9">
                                 <button type="button" className="btn btn-block btn-default follow">Follow</button>
