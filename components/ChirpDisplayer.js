@@ -4,12 +4,25 @@ class ChirpDisplayer extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            chirps: ['a', 'b', 'c'],
+            chirps: [],
             following: ['a', 'b']
         }
     }
     componentDidMount() {
         // function to call fetch to get the posted chirps
+        fetch('http://7d7089fa.ngrok.io/api/shouts', {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then((response) => {
+            console.log(response)
+            this.setState({
+                chirps: response.shouts,
+            })
+            console.log(this.state.chirps)
+            console.log(response.shouts[1].user.name)
+            console.log(this.state.chirps[1].user.name)
+        })
     }
 
     render() {
@@ -18,9 +31,10 @@ class ChirpDisplayer extends Component {
                         <div className="panel-body">
                             <div className="col-sm-3 col-sm-offset-0 col-xs-6 col-xs-offset-3 text-center">
                                 <img className="avatar thumbnail" src={"http://robohash.org/" + chirp[i]}/>
+                                <span></span>
                             </div>
                             <div className="col-sm-9 col-xs-12">
-                                <p>{this.state.chirps[i]}</p>
+                                <p>{this.state.chirps[i].body}</p>
                             </div>
                             <div className="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-9">
                                 <button type="button" className="btn btn-block btn-default follow">Follow</button>

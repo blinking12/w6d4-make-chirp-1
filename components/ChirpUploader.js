@@ -17,7 +17,10 @@ class ChirpUploader extends Component {
         data.append('chirp', this.state.chirp)
         this.state.chirps.push(this.state.chirp)
         document.querySelector('#shout').value = ''
-        console.log(this.state.chirps)
+
+        fetch('http://7d7089fa.ngrok.io/api/shouts')
+        .then(response => response.json())
+        .then(response => console.log(response))
     }
     render() {
         return <div className="container uploader">
