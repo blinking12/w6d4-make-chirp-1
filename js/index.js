@@ -6,14 +6,14 @@ signin.addEventListener('click', signinHandler)
 
 function signupHandler() {
 
-  var username = document.querySelector('#username').value
+  var email = document.querySelector('#email').value
   var password = document.querySelector('#password').value
   var name = document.querySelector('#name').value
   var photo = document.querySelector('#photo').value
 
   fetch('', {
     body: JSON.stringify({
-      username: username,
+      email: email,
       password: password,
       name: name,
       photo: photo
@@ -47,12 +47,12 @@ function signedupHandler(response) {
 
 function signinHandler() {
 
-  var username = document.querySelector('#username').value
+  var email = document.querySelector('#email').value
   var password = document.querySelector('#password').value
 
   fetch('', {
     body: JSON.stringify({
-      username: username,
+      email: email,
       password: password
     }),
     method: 'POST',
