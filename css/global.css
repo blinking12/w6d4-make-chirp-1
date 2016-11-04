@@ -70,6 +70,11 @@ header {
   color: #50e3c2;
 }
 
+#forgot {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .btncolor {
   color: white;
   background: #50E3C2;

@@ -10,6 +10,13 @@
   <link rel="stylesheet" type="text/css" href="css/global.css" />
 </head>
 <body>
+    <header class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <img class="logo" src="./img/chirp-logo.png" alt="">
+        </div>
+      </div>
+    </header>
     <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
@@ -18,46 +25,34 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-sm-6 col-sm-offset-3" id="errors">
-
-          </div>
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3" id="errors"></div>
         </div>
         <div class="row">
-        <br />
-            <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-                <img src="img/chirp-logo.png" alt="Chirp Logo" width=70>
-            </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-            <br/>
+            <div class="col-sm-6 col-sm-offset-3">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="text" id="email" name="email" class="form-control" required />
                 </div>
-            <br/>
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" class="form-control" required />
                 </div>
+
             </div>
         </div>
-        <br/>
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <img src="img/chirp-logo.png" alt="Chirp Logo" width=150>
             </div>
-            <div class="col-sm-3 col-sm-offset-6">
-                <button id="signup" type="button" class="btn btncolor btn-block">Sign In!</button>
+            <div class="row">
+              <div id="forgot" class="text-center col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-3">
+                  <a href="#">Forgot Password?</a>
+              </div>
+              <div class="form-group col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-0">
+                  <button id="sign-in" type="button" class="btn btncolor btn-block">Sign In!</button>
+              </div>
             </div>
         </div>
-        <br/>
-        <br/>
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-                <a href="url">Forgot Password</a>
-            </div>
-        </div>
-    </div>
   <!-- sign in screen with form fields for username, password. Log in button and a forgot password link -->
 
   <!-- Scripts go here. -->

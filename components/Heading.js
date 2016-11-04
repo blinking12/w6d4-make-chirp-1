@@ -4,9 +4,10 @@ import { Link } from 'react-router'
 class Heading extends Component {
     constructor(props) {
         super(props)
-        // this.state = {
-        //
-        // }
+    }
+    logout() {
+        sessionStorage.setItem('chirps', '')
+        window.location.href = "/index.html"
     }
     render() {
         return <div className="container-fluid heading">
@@ -22,7 +23,7 @@ class Heading extends Component {
                         <button type="button" className="btn btn-default">Users</button>
                     </Link>
                     <img className="thumbnail avatar" src="http://robohash.org/today" />
-                    <button type="button" className="btn btn-default">Logout</button>
+                    <button type="button" className="btn btn-default" onClick={this.logout}>Logout</button>
                 </div>
             </div>
         </div>

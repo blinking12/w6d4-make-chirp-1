@@ -5,22 +5,22 @@ class ChirpUploader extends Component {
         super(props)
         this.upload = this.upload.bind(this)
         this.state = {
-            chirps: []
+            chirp: ''
         }
     }
     upload() {
         // upload function to post chirp to the server
-
-        // 'http://7d7089fa.ngrok.io'
-
         var data = new FormData()
         data.append('chirp', this.state.chirp)
-        this.state.chirps.push(this.state.chirp)
-        document.querySelector('#shout').value = ''
 
-        fetch('http://7d7089fa.ngrok.io/api/shouts')
+        fetch('http://7d7089fa.ngrok.io/api/shouts', {
+            method: 'POST',
+            body: data
+        })
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(renderView)
+
+        // document.querySelector('#shout').value = ''
     }
     render() {
         return <div className="container uploader">
