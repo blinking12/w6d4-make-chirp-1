@@ -62,5 +62,12 @@ header {
 }
 .btncolor {
     color: white;
-    background: #50E3C2;
+    background: $green;
+    margin-bottom: 10px;
+}
+#big_logo {
+    img {
+        width: 80%;
+    }
+    margin: 0 auto;
 }

@@ -45,10 +45,10 @@ class UserDisplayer extends Component {
                             <div className="panel-body">
                                 <div className="text-center">
                                     <div className="col-xs-12">
-                                        <img className="avatar thumbnail" src={user.user.avatar}/>
+                                        <img className="avatar thumbnail" src="http://robohash.org/today"/>
                                     </div>
                                     <div className="col-xs-12">
-                                        <p>{user.user.username}</p>
+                                        <p>test</p>
                                     </div>
                                 </div>
                                 <div className="">

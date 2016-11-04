@@ -31,20 +31,18 @@ function signupHandler() {
 
   fetch('http://7d7089fa.ngrok.io/api/signup', {
     method: 'POST',
-    body: data,
-    headers: {
-      'Content-Type': 'application/json'
-    }
+    body: data
   })
   .then(response => response.json())
-  .then(response => console.log(response))
-  // .then(signedupHandler)
-
+  .then(signedupHandler)
 }
 
 function signedupHandler(response) {
   if (typeof response.user != 'undefined') {
     sessionStorage.setItem('chirps', response.user.api_token)
+    sessionStorage.setItem('name', response.user.name)
+    sessionStorage.setItem('email', response.user.email)
+    sessionStorage.setItem('avatar', response.user.avatar)
     window.location.href = '/chirps.html'
   }
   else {
@@ -77,5 +75,8 @@ function signinHandler() {
 
 function signedinHandler(response) {
   sessionStorage.setItem('chirps', response.user.api_token)
+  sessionStorage.setItem('name', response.user.name)
+  sessionStorage.setItem('email', response.user.email)
+  sessionStorage.setItem('avatar', response.user.avatar)
   window.location.href = '/chirps.html'
 }

@@ -77,5 +77,14 @@ header {
 
 .btncolor {
   color: white;
-  background: #50E3C2;
+  background: #50e3c2;
+  margin-bottom: 10px;
+}
+
+#big_logo {
+  margin: 0 auto;
+}
+
+#big_logo img {
+  width: 80%;
 }
