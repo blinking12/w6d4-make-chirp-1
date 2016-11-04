@@ -13,8 +13,10 @@ function signupHandler() {
 
   fetch('', {
     body: JSON.stringify({
-      email: email,
-      password: password
+      username: username,
+      password: password,
+      name: name,
+      photo: photo
     }),
     method: 'POST',
     headers: {
