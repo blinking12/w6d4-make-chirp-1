@@ -11,7 +11,7 @@ var renderView = function() {
     ReactDOM.render(
         // <Chirps />
         <Router history={browserHistory}>
-            <Route path="/chirps.html" component={Chirps} />
+            <Route path="w6d4-make-chirp/chirps.html" component={Chirps} />
             <Route path="/users" component={UserDisplayer} />
         </Router>
         , document.querySelector('#app')
