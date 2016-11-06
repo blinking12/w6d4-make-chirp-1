@@ -71,12 +71,14 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var renderView = function renderView() {
-	    _reactDom2.default.render(_react2.default.createElement(_Chirps2.default, null)
-	    // {/* <Router history={browserHistory}>
-	    //     <Route path="/chirps.html" component={Chirps} />
-	    //     <Route path="/users" component={UserDisplayer} />
-	    // </Router> */}
-	    , document.querySelector('#app'));
+	    _reactDom2.default.render(
+	    // <Chirps />
+	    _react2.default.createElement(
+	        _reactRouter.Router,
+	        { history: _reactRouter.browserHistory },
+	        _react2.default.createElement(_reactRouter.Route, { path: '/chirps.html', component: _Chirps2.default }),
+	        _react2.default.createElement(_reactRouter.Route, { path: '/users', component: _UserDisplayer2.default })
+	    ), document.querySelector('#app'));
 	};
 
 	renderView();

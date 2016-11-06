@@ -9,11 +9,11 @@ import UserDisplayer from '../components/UserDisplayer'
 
 var renderView = function() {
     ReactDOM.render(
-        <Chirps />
-        // {/* <Router history={browserHistory}>
-        //     <Route path="/chirps.html" component={Chirps} />
-        //     <Route path="/users" component={UserDisplayer} />
-        // </Router> */}
+        // <Chirps />
+        <Router history={browserHistory}>
+            <Route path="/chirps.html" component={Chirps} />
+            <Route path="/users" component={UserDisplayer} />
+        </Router>
         , document.querySelector('#app')
     )
 }
