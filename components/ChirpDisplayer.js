@@ -4,6 +4,7 @@ class ChirpDisplayer extends Component {
     constructor(props) {
         super(props)
         this.updateChirps = this.updateChirps.bind(this)
+        this.unfollow = this.unfollow.bind(this)
         this.state = {
             chirps: [],
             updateChirps: props.updateChirps
@@ -88,7 +89,7 @@ class ChirpDisplayer extends Component {
             return <div className="col-xs-5 follower_panel" key={i}>
                     <div className="">
                         <img className="avatar thumbnail" src={follower.avatar}/>
-                        <div className="follower_text">
+                        <div className="follower_text flex text-center">
                             {follower.name}
                         </div>
                         <div>
@@ -104,6 +105,7 @@ class ChirpDisplayer extends Component {
                     {chirps}
                 </div>
                 <div className="col-sm-4 col-sm-offset-1 text-center">
+                <h3 id="following_title">Following</h3>
                     {displayFollowers}
                 </div>
             </div>

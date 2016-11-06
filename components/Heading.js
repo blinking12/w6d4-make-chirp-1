@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
+const path = window.location.href.includes('github') ? '/w6d4-make-chirp/' : '/'
+
 class Heading extends Component {
     constructor(props) {
         super(props)
     }
     logout() {
         sessionStorage.setItem('chirps', '')
-        window.location.href = "/index.html"
+        sessionStorage.setItem('id', '')
+        sessionStorage.setItem('avatar', '')
+        window.location.href = path + 'index.html'
     }
     render() {
+        // const path = '/w6d4-make-chirp/'
+
         var avatar = 'https://immense-harbor-69502.herokuapp.com' + sessionStorage.getItem('avatar')
         return <div className="container-fluid heading">
             <div className="row flex">
@@ -17,14 +23,14 @@ class Heading extends Component {
                     <img className="logo" src="./img/chirp-logo.png" />
                 </div>
                 <div className="col-xs-9 text-right">
-                    <Link to="/chirps.html">
+                    <Link to={path + 'chirps.html'}>
                         <button type="button" className="btn btn-default heading_buttons">Chirps</button>
                     </Link>
-                    <Link to="/users.html">
+                    <Link to={path + 'users'}>
                         <button type="button" className="btn btn-default heading_buttons">Users</button>
                     </Link>
                     <img className="thumbnail avatar" src={avatar} />
-                    <button type="button" className="btn btn-default" onClick={this.logout}>Logout</button>
+                    <button type="button" className="btn btn-default heading_buttons" onClick={this.logout}>Logout</button>
                 </div>
             </div>
         </div>

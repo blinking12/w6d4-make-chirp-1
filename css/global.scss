@@ -13,6 +13,7 @@ header {
 .flex {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .logo {
     width: 70px;
@@ -96,11 +97,21 @@ header {
     }
 }
 .heading_buttons {
-    margin-left: 10px;
+    margin: 0 10px;
+    border: none;
+    border-bottom: 2px solid $green;
+    border-radius: 0;
+    margin-bottom: 10px;
+    &:hover {
+        background-color: transparent;
+        border-bottom: 2px solid $gray;
+    }
 }
 .panel-body {
-    border: 1px solid #ddd;
     margin: 5px 0;
+}
+.panel_outline {
+    border: 1px solid #ddd;
 }
 .user_name {
     padding: 0;
@@ -123,5 +134,22 @@ header {
     margin-right: 5px;
     .follower_text {
         padding: 5px 0;
+        font-size: 12px;
+        height: 50px;
+        margin: 0 auto;
+    }
+    .btn {
+        font-size: 12px;
     }
 }
+#following_title {
+    font-size: 18px;
+    padding: 0 0 20px 0 ;
+    border-bottom: 2px solid $green;
+}
+
+
+
+
+
+//

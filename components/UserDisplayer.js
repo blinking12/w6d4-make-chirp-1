@@ -46,7 +46,7 @@ class UserDisplayer extends Component {
         })
         var users = this.state.users.map((user, i) => {
             return <div className="col-sm-3 col-xs-6 users" key={i}>
-                        <div className="panel-body">
+                        <div className="panel-body panel_outline">
                             <div className="text-center">
                                 <div className="col-xs-12 text-center">
                                     <img className="avatar thumbnail" src={user.avatar}/>
