@@ -12,7 +12,7 @@ class Heading extends Component {
         window.location.href = "/index.html"
     }
     render() {
-        const path = 'https://waweir.github.io/w6d4-make-chirp/'
+        const path = '/w6d4-make-chirp/'
 
         var avatar = 'https://immense-harbor-69502.herokuapp.com' + sessionStorage.getItem('avatar')
         return <div className="container-fluid heading">

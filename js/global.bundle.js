@@ -27146,7 +27146,7 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            var path = 'https://waweir.github.io/w6d4-make-chirp/';
+	            var path = '/w6d4-make-chirp/';
 
 	            var avatar = 'https://immense-harbor-69502.herokuapp.com' + sessionStorage.getItem('avatar');
 	            return _react2.default.createElement(
