@@ -3,7 +3,8 @@ var signin = document.querySelector('#sign-in')
 var signupHome = document.querySelector('#signup')
 var signinHome = document.querySelector('#signin')
 
-const path = window.location.href
+// const path = window.location.href
+const path = 'https://waweir.github.io/w6d4-make-chirp/'
 
 if (signup !== null) {
    signup.addEventListener('click', signupHandler)
