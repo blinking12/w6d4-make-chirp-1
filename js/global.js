@@ -11,8 +11,8 @@ import UserDisplayer from '../components/UserDisplayer'
 var renderView = function() {
     ReactDOM.render(
         <Router history={browserHistory}>
-            <Route path="/chirps.html" component={Chirps} />
-            <Route path="/users" component={UserDisplayer} />
+            <Route path="w6d4-make-chirp/chirps.html" component={Chirps} />
+            <Route path="w6d4-make-chirp/users" component={UserDisplayer} />
         </Router>,
         document.querySelector('#app')
     )
