@@ -6,13 +6,13 @@ import Heading from '../components/Heading'
 import Chirps from '../components/Chirps'
 import UserDisplayer from '../components/UserDisplayer'
 
+const path = window.location.href.includes('github') ? '/w6d4-make-chirp/' : '/'
 
 var renderView = function() {
     ReactDOM.render(
-        // <Chirps />
         <Router history={browserHistory}>
-            <Route path="w6d4-make-chirp/chirps.html" component={Chirps} />
-            <Route path="w6d4-make-chirp/users" component={UserDisplayer} />
+            <Route path={path + 'chirps.html'} component={Chirps} />
+            <Route path={path + 'users'} component={UserDisplayer} />
         </Router>
         , document.querySelector('#app')
     )

@@ -4,6 +4,7 @@ class ChirpDisplayer extends Component {
     constructor(props) {
         super(props)
         this.updateChirps = this.updateChirps.bind(this)
+        this.unfollow = this.unfollow.bind(this)
         this.state = {
             chirps: [],
             updateChirps: props.updateChirps

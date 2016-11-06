@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
+const path = window.location.href.includes('github') ? '/w6d4-make-chirp/' : '/'
+
 class Heading extends Component {
     constructor(props) {
         super(props)
@@ -9,10 +11,10 @@ class Heading extends Component {
         sessionStorage.setItem('chirps', '')
         sessionStorage.setItem('id', '')
         sessionStorage.setItem('avatar', '')
-        window.location.href = "/index.html"
+        window.location.href = path + 'index.html'
     }
     render() {
-        const path = '/w6d4-make-chirp/'
+        // const path = '/w6d4-make-chirp/'
 
         var avatar = 'https://immense-harbor-69502.herokuapp.com' + sessionStorage.getItem('avatar')
         return <div className="container-fluid heading">

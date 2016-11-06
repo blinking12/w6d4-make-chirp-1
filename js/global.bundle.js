@@ -70,14 +70,14 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var path = window.location.href.includes('github') ? '/w6d4-make-chirp/' : '/';
+
 	var renderView = function renderView() {
-	    _reactDom2.default.render(
-	    // <Chirps />
-	    _react2.default.createElement(
+	    _reactDom2.default.render(_react2.default.createElement(
 	        _reactRouter.Router,
 	        { history: _reactRouter.browserHistory },
-	        _react2.default.createElement(_reactRouter.Route, { path: 'w6d4-make-chirp/chirps.html', component: _Chirps2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: 'w6d4-make-chirp/users', component: _UserDisplayer2.default })
+	        _react2.default.createElement(_reactRouter.Route, { path: path + 'chirps.html', component: _Chirps2.default }),
+	        _react2.default.createElement(_reactRouter.Route, { path: path + 'users', component: _UserDisplayer2.default })
 	    ), document.querySelector('#app'));
 	};
 
@@ -27128,6 +27128,8 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	var path = window.location.href.includes('github') ? '/w6d4-make-chirp/' : '/';
+
 	var Heading = function (_Component) {
 	    _inherits(Heading, _Component);
 
@@ -27143,12 +27145,12 @@
 	            sessionStorage.setItem('chirps', '');
 	            sessionStorage.setItem('id', '');
 	            sessionStorage.setItem('avatar', '');
-	            window.location.href = "/index.html";
+	            window.location.href = path + 'index.html';
 	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            var path = '/w6d4-make-chirp/';
+	            // const path = '/w6d4-make-chirp/'
 
 	            var avatar = 'https://immense-harbor-69502.herokuapp.com' + sessionStorage.getItem('avatar');
 	            return _react2.default.createElement(
@@ -27407,6 +27409,7 @@
 	        var _this = _possibleConstructorReturn(this, (ChirpDisplayer.__proto__ || Object.getPrototypeOf(ChirpDisplayer)).call(this, props));
 
 	        _this.updateChirps = _this.updateChirps.bind(_this);
+	        _this.unfollow = _this.unfollow.bind(_this);
 	        _this.state = {
 	            chirps: [],
 	            updateChirps: props.updateChirps
