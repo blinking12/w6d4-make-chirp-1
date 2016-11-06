@@ -12,40 +12,30 @@ class UserDisplayer extends Component {
     }
     componentDidMount() {
         // function to call fetch to get the posted chirps
-        fetch('http://7d7089fa.ngrok.io/api/all?api_token=' + sessionStorage.getItem('chirps'), {
+        fetch('https://immense-harbor-69502.herokuapp.com/api/all?api_token=' + sessionStorage.getItem('chirps') + '&id=' + sessionStorage.getItem('id'), {
             method: 'GET',
         })
         .then(response => response.json())
         .then((response) => {
-            console.log(response)
             this.setState({
-                users: response.users,
+                users: response.users
             })
         })
-        // fetch('http://7d7089fa.ngrok.io/api/allfollowers', {
-        //     method: 'GET',
-        // })
-        // fetch('http://7d7089fa.ngrok.io/api/follow', {
-        //     method: 'GET',
-        // })
-
     }
     follow(userid) {
-        console.log(userid)
-        fetch('https://immense-harbor-69502.herokuapp.com/api/follow', {
-            body: JSON.stringify({
-              id: userid,
-              api_token: sessionStorage.getItem('chirps'),
-            }),
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        // .then(response => console.log(response))
+            fetch('https://immense-harbor-69502.herokuapp.com/api/follow', {
+                body: JSON.stringify({
+                  id: userid,
+                  api_token: sessionStorage.getItem('chirps'),
+                }),
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+        }
 
-    }
     render() {
         var users = this.state.users.map((user, i) => {
             if (user.avatar === null) {
@@ -55,29 +45,28 @@ class UserDisplayer extends Component {
             }
         })
         var users = this.state.users.map((user, i) => {
-            return <div className="col-sm-3 col-xs-5 panel panel-default users" key={i}>
-                            <div className="panel-body">
-                                <div className="text-center">
-                                    <div className="col-xs-12">
-                                        <img className="avatar thumbnail" src={user.avatar}/>
-                                    </div>
-                                    <div className="col-xs-12">
-                                        <p>{user.name}</p>
-                                        <p>{user.id}</p>
-                                    </div>
+            return <div className="col-sm-3 col-xs-6 users" key={i}>
+                        <div className="panel-body">
+                            <div className="text-center">
+                                <div className="col-xs-12 text-center">
+                                    <img className="avatar thumbnail" src={user.avatar}/>
                                 </div>
-                                <div className="">
-                                    <button type="button" className="btn btn-block btn-default follow" onClick={() => this.follow(user.id)}>Follow</button>
+                                <div className="col-xs-12 user_name">
+                                    <p className="user_name">{user.name}</p>
                                 </div>
+                            </div>
+                            <div className="col-xs-12 col-sm-10 col-sm-offset-1">
+                                <button type="button" id="followButton" className="btn btn-block btn-default follow" onClick={() => this.follow(user.id)}>Follow</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                })
+            })
 
-        return <div className="container">
+        return <div className="container-fluid">
             <div className="row">
                 <Heading />
-                <div className="col-sm-12">
-                {users}
+                <div className="row">
+                    {users}
             </div>
         </div>
         </div>

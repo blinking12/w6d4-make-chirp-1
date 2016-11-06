@@ -29,7 +29,20 @@ header {
   margin-top: 16px;
 }
 
+.follow {
+  border: 1px solid #50e3c2;
+}
+
 .follow:hover {
+  background-color: transparent;
+  border: 1px solid #5b5b5b;
+}
+
+.unfollow {
+  margin-top: 0;
+}
+
+.unfollow:hover {
   background-color: transparent;
   border: 1px solid #50e3c2;
 }
@@ -79,6 +92,26 @@ header {
   color: white;
   background: #50e3c2;
   margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.btncolor:hover {
+  color: #5b5b5b;
+}
+
+.btngray {
+  color: white;
+  background: #5b5b5b;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.btngray:hover {
+  color: #50e3c2;
+}
+
+.btn-default + .btn-block {
+  margin-top: 0px;
 }
 
 #big_logo img {
@@ -90,10 +123,36 @@ header {
   margin-left: 10px;
 }
 
-.users {
-  margin: 5px;
+.panel-body {
+  border: 1px solid #ddd;
+  margin: 5px 0;
+}
+
+.user_name {
+  padding: 0;
+}
+
+.user_name p {
+  display: inline-block;
+  height: 30px;
+  margin: 10px 0;
 }
 
 .chirp_body {
   word-wrap: break-word;
+}
+
+.hidden {
+  display: none;
+  margin-top: 0px;
+}
+
+.follower_panel {
+  margin-top: 5px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.follower_panel .follower_text {
+  padding: 5px 0;
 }
