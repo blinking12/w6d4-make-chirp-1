@@ -3,7 +3,7 @@ var signin = document.querySelector('#sign-in')
 var signupHome = document.querySelector('#signup')
 var signinHome = document.querySelector('#signin')
 
-const path = window.location.href.includes('github') ? 'w6d4-make-chirp/' : '/'
+// const path = window.location.href.includes('github') ? 'w6d4-make-chirp/' : '/'
 
 if (signup !== null) {
    signup.addEventListener('click', signupHandler)
@@ -11,10 +11,10 @@ if (signup !== null) {
   signin.addEventListener('click', signinHandler)
 } else {
   signupHome.addEventListener('click', function() {
-    window.location.href = (path + '/sign-in.html')
+    window.location.href = (path + 'sign-in.html')
   })
   signinHome.addEventListener('click', function() {
-    window.location.href = (path + '/sign-in.html')
+    window.location.href = (path + 'sign-in.html')
   })
 }
 
@@ -44,7 +44,7 @@ function signedupHandler(response) {
     sessionStorage.setItem('chirps', response.user.api_token)
     sessionStorage.setItem('id', response.user.id)
     sessionStorage.setItem('avatar', response.user.avatar)
-    window.location.href = (path + '/chirps.html')
+    window.location.href = (path + 'chirps.html')
   }
   else {
     response.forEach(function(error) {
@@ -78,6 +78,6 @@ function signedinHandler(response) {
   sessionStorage.setItem('chirps', response.user.api_token)
   sessionStorage.setItem('id', response.user.id)
   sessionStorage.setItem('avatar', response.user.avatar)
-  window.location.href = (path + '/chirps.html')
+  window.location.href = (path + 'chirps.html')
   console.log(sessionStorage.getItem('avatar'))
 }
