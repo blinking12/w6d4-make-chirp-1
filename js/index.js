@@ -4,6 +4,7 @@ var signupHome = document.querySelector('#signup')
 var signinHome = document.querySelector('#signin')
 
 // const path = window.location.href.includes('github') ? 'w6d4-make-chirp/' : '/'
+var path = window.location.href
 
 if (signup !== null) {
    signup.addEventListener('click', signupHandler)
@@ -14,7 +15,8 @@ if (signup !== null) {
     // window.location.href = (path + 'sign-in.html')
     console.log(window.location.href)
     console.log(window.location)
-    // window.location.href = "w6d4-make-chirp/sign-in.html"
+    console.log(path + 'sign-up.html')
+    window.location.href = path + 'sign-up.html'
   })
   signinHome.addEventListener('click', function() {
     window.location.href = (path + 'sign-in.html')
