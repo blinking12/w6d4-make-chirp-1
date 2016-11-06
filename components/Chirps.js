@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
+import Heading from '../components/Heading'
 import ChirpUploader from '../components/ChirpUploader'
 import ChirpDisplayer from '../components/ChirpDisplayer'
-import Heading from '../components/Heading'
 
 class Chirps extends Component {
     constructor(props) {

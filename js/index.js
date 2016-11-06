@@ -17,7 +17,7 @@ if (signup !== null) {
 }
 
 function signupHandler() {
-
+  console.log('signing up')
   var email = document.querySelector('#email').value
   var password = document.querySelector('#password').value
   var name = document.querySelector('#name').value
