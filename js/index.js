@@ -12,7 +12,9 @@ if (signup !== null) {
 } else {
   signupHome.addEventListener('click', function() {
     // window.location.href = (path + 'sign-in.html')
-    window.location.href = "w6d4-make-chirp/sign-in.html"
+    console.log(window.location.href)
+    console.log(window.location)
+    // window.location.href = "w6d4-make-chirp/sign-in.html"
   })
   signinHome.addEventListener('click', function() {
     window.location.href = (path + 'sign-in.html')
