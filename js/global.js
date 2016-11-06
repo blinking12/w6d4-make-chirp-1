@@ -12,7 +12,7 @@ var renderView = function() {
         // <Chirps />
         <Router history={browserHistory}>
             <Route path="w6d4-make-chirp/chirps.html" component={Chirps} />
-            <Route path="/users" component={UserDisplayer} />
+            <Route path="w6d4-make-chirp/users" component={UserDisplayer} />
         </Router>
         , document.querySelector('#app')
     )

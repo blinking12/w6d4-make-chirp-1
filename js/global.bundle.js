@@ -77,7 +77,7 @@
 	        _reactRouter.Router,
 	        { history: _reactRouter.browserHistory },
 	        _react2.default.createElement(_reactRouter.Route, { path: 'w6d4-make-chirp/chirps.html', component: _Chirps2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/users', component: _UserDisplayer2.default })
+	        _react2.default.createElement(_reactRouter.Route, { path: 'w6d4-make-chirp/users', component: _UserDisplayer2.default })
 	    ), document.querySelector('#app'));
 	};
 
